@@ -47,9 +47,11 @@ int bolehin_gak_ya(const char *path) {
             scanf("%s", input_password);
             if (strcmp(input_password, secret_password) != 0) {
                 printf("Kata sandi salah. Akses ditolak.\n");
+                buatLog("DENIED ACCESS", path, "Akses folder rahasia ditolak");
                 return 0;
             }
             password_entered = 1;
+            buatLog("GRANTED ACCESS", path, "Akses folder rahasia diterima");
         }
         return 1;
 }
@@ -75,11 +77,13 @@ char fpath[1000];
     } else {
         sprintf(fpath, "%s%s", dirpath, path);
     }
-        if(strstr(fpath, "rahasia") != NULL){
+
+    if(strstr(fpath, "rahasia") != NULL){
         if (!bolehin_gak_ya(path)) {
             return -EACCES;
         }
-        }
+    }
+
     DIR *dp = opendir(fpath);
     if (dp == NULL)
         return -errno;
@@ -95,6 +99,21 @@ char fpath[1000];
     }
     closedir(dp);
     password_entered = 0;
+    return 0;
+}
+
+// Implementasi eazy open untuk membuka file
+static int open_eazy(const char *path, struct fuse_file_info *fi) {
+    char fpath[1000];
+    sprintf(fpath, "%s%s", dirpath, path);
+    if(strstr(fpath, "rahasia") != NULL){
+        if (!bolehin_gak_ya(path)) {
+            return -EACCES;
+        }
+    }
+    int res = open(fpath, fi->flags);
+    if (res == -1) return -errno;
+    close(res);
     return 0;
 }
 
@@ -261,6 +280,7 @@ static int write_eazy(const char *path, const char *buf, size_t size, off_t offs
 static struct fuse_operations operations = {
     .getattr = getattr_eazy,
     .readdir = readdir_eazy,
+    .open = open_eazy,
     .mkdir = mkdir_eazy,
     .rmdir = rmdir_eazy,
     .chmod = chmod_eazy,
