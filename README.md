@@ -165,6 +165,9 @@ static int reverse_content(const char *path) {
 ```
 
 ### Screenshot hasil pengerjaan
+![Screenshot 2024-05-25 121815](https://github.com/krisadityabcde/Sisop-4-2024-MH-IT21/assets/144150187/99dfd098-5983-4276-a92c-c1e9b5a1ec00)
+![Screenshot 2024-05-25 121723](https://github.com/krisadityabcde/Sisop-4-2024-MH-IT21/assets/144150187/23a2160f-9d62-4dae-8b38-2b33a507e373)
+![Screenshot 2024-05-25 121503](https://github.com/krisadityabcde/Sisop-4-2024-MH-IT21/assets/144150187/f2638c20-4321-4afb-bbab-0677d2307a0d)
 
 ### Kendala
 Tidak ada kendala
@@ -328,6 +331,11 @@ static void buatLog(const char *activity, const char *path, const char *result) 
 Fungsi pembuatan log sama seperti biasanya.
 
 ### Screenshot hasil pengerjaan
+![Screenshot 2024-05-25 170433](https://github.com/krisadityabcde/Sisop-4-2024-MH-IT21/assets/144150187/949df051-51b7-4a20-a171-7b191eba6582)
+![Screenshot 2024-05-25 165219](https://github.com/krisadityabcde/Sisop-4-2024-MH-IT21/assets/144150187/5b3dd094-b449-4e1d-bba5-3ccae8bba031)
+![Screenshot 2024-05-25 122119](https://github.com/krisadityabcde/Sisop-4-2024-MH-IT21/assets/144150187/d9b43473-21fe-4147-90ac-8a9cd298b791)
+![Screenshot 2024-05-25 122106](https://github.com/krisadityabcde/Sisop-4-2024-MH-IT21/assets/144150187/20b0c131-802b-42f0-825f-bb422d529978)
+![Screenshot 2024-05-25 122034](https://github.com/krisadityabcde/Sisop-4-2024-MH-IT21/assets/144150187/938cbbf0-b516-453c-942c-a3ae5ab8fc67)
 
 ### Kendala
 Tidak ada kendala
@@ -338,13 +346,21 @@ Tidak ada revisi
 ## Soal 3
 ### 3a
 Buatlah sebuah direktori dengan ketentuan seperti pada tree berikut
+
 .
+
 ├── [nama_bebas]
+
 ├── relics
+
 │   ├── relic_1.png.000
+
 │   ├── relic_1.png.001
+
 │   ├── dst dst…
+
 │   └── relic_9.png.010
+
 └── report
 
 ### 3b
@@ -555,6 +571,10 @@ Direktori report adalah direktori yang akan dibagikan menggunakan Samba File Ser
 Cara melakukannya hanya dengan command copy ke dalam direktori report kemudian menginisiasi Samba sesuai denga nmodul.
 
 ### Screenshot hasil pengerjaan
+![Screenshot 2024-05-25 165628](https://github.com/krisadityabcde/Sisop-4-2024-MH-IT21/assets/144150187/e64a5099-9dfe-489e-8be4-dff2f7e7d9c0)
+![Screenshot 2024-05-25 165543](https://github.com/krisadityabcde/Sisop-4-2024-MH-IT21/assets/144150187/71bef7f8-2bab-4178-900e-32dbf9ba645b)
+![Screenshot 2024-05-25 165459](https://github.com/krisadityabcde/Sisop-4-2024-MH-IT21/assets/144150187/db10d763-c3a5-4c4c-bf97-942a8782a070)
+![Screenshot 2024-05-25 165403](https://github.com/krisadityabcde/Sisop-4-2024-MH-IT21/assets/144150187/e33010ba-8383-49f0-9a2e-f7376a0ad141)
 
 ### Kendala
 Tidak ada kendala
